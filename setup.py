@@ -10,7 +10,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='sqlforerogamer',
-    version='1.0.0',
+    version='1.1.0',
     description='A library for http://erogamescape.dyndns.org/~ap2/ero/toukei_kaiseki/sql_for_erogamer_index.php',
     long_description=long_description,
     url='http://github.com/roronya/sqlforerogamer',
