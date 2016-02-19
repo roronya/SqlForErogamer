@@ -10,10 +10,10 @@ def execute(sql):
     http_responce = requests.post(EROGAME_SCAPE_SQL_URL, {'sql': sql})
     html = http_responce.content
     soup = BeautifulSoup(html, "lxml")
-    #- syntax error が出てるか確認
+    #- error が出てるか確認
     message = soup.find(id='query_result_main').get_text()
     if message[:6] == 'ERROR:':
-        raise SQLSyntaxError(message)
+        raise SQLError(message)
     #-
 
     columns = [th.get_text()

@@ -1,2 +1,2 @@
-class SQLSyntaxError(Exception):
+class SQLError(Exception):
     pass
