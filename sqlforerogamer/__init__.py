@@ -1,2 +1,2 @@
-from .sqlexecuter import *
+from .sqlforerogamer import *
 from .exception import *
