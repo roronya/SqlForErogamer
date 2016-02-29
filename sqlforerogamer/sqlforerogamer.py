@@ -6,7 +6,7 @@ from .exception import *
 EROGAME_SCAPE_SQL_URL = 'http://erogamescape.dyndns.org/~ap2/ero/toukei_kaiseki/sql_for_erogamer_form.php'
 
 
-def execute(sql):
+def read_sql(sql):
     http_responce = requests.post(EROGAME_SCAPE_SQL_URL, {'sql': sql})
     html = http_responce.content
     soup = BeautifulSoup(html, "lxml")
