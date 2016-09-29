@@ -1,5 +1,9 @@
 import sqlforerogamer
+import unittest
 
-print(sqlforerogamer.read_sql("select * from hoge"))
-print(sqlforerogamer.read_sql("SELECT id  FROM brandlist WHERE id = '1'"))
-print(sqlforerogamer.read_sql("select * froma hoge"))
+class TestSqlforerogamer(unittest.TestCase):
+    def test_tables(self):
+        print(sqlforerogamer.tables())
+
+if __name__ == '__main__':
+    unittest.main()

@@ -1,2 +1,5 @@
-class SQLError(Exception):
+class Error(Exception):
+    pass
+
+class SQLError(Error):
     pass
