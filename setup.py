@@ -10,7 +10,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='sqlforerogamer',
-    version='1.3.1',
+    version='1.3.2',
     description='A library for http://erogamescape.dyndns.org/~ap2/ero/toukei_kaiseki/sql_for_erogamer_index.php',
     long_description=long_description,
     url='http://github.com/roronya/sqlforerogamer',
@@ -26,5 +26,5 @@ setup(
     ],
     keywords='erogame sql',
     packages=find_packages(exclude=['tests*']),
-    install_requires=['requests', 'beautifulsoup4'],
+    install_requires=['requests', 'beautifulsoup4', 'lxml', 'html5lib'],
 )
