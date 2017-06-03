@@ -8,6 +8,6 @@
 
 ## usage
     >>> import sqlforerogamer
-    >>> sqlforerogamer.read_sql("SELECT id  FROM brandlist WHERE id = '1'")
-    id
-    0  1
+    >>> sqlforerogamer.read("select id, brandname, brandfurigana, url from brandlist where id = 1")
+    index id brandname brandfurigana                         url
+    0      1  1       age          アージュ  http://www.age-soft.co.jp/
