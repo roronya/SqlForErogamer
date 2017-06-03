@@ -27,4 +27,5 @@ setup(
     keywords='erogame sql',
     packages=find_packages(exclude=['tests*']),
     install_requires=['requests', 'beautifulsoup4', 'lxml', 'html5lib'],
+    test_suite='tests'
 )

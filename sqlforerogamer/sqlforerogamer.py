@@ -16,4 +16,4 @@ def read(sql):
     return df
 
 def tables():
-    return read('select schemaname, relname from pg_stat_user_tables');
+    return read('select schemaname, relname from pg_stat_user_tables')
