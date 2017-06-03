@@ -1,9 +1,20 @@
 language: python
 python:
-    - "3.4"
-    - "3.5"
-    - "3.6"
-install: # travisci の VM の setuptools のバージョンが低いと怒られるので upgrade する
-    - pip install setuptools --upgrade
+- '3.4'
+- '3.5'
+- '3.6'
+install:
+- pip install setuptools --upgrade
 script:
-    - python ./setup.py test
+- python ./setup.py test
+deploy:
+  provider: pypi
+  user: roronya
+  password:
+    secure: RCqHAR3fYleUPkOCH2atIocN5nc+uUc0+gDOL+3WDZzWWIGHSCsFaVO0N+2sqeRP8cbvnGe9kxcbLwslhFSL/xvUobedYAZTrCIiCSn9Bm5v9C36cEkKmKXwJAaa2+nWmagFelKS9nVDx+Rbg5aTshc6M00i3MCFYl/h0r6VZJ/hQaFFW5rvz12w5Gnjc7/Qzi3vspC0Q79oEyxthLgIlqCRYRJuItC4Yayx8EJyCWqF8erRVxyrZ3Zb07u9/gNhXdJVSCP5qGNcrWgJyaHqnpRrbpYmWLHWt0uhxYDhQQtfHA0dUp5vZwaN7nZhG75O4ez0sgNqA1TV1vwEbnJn8wWAlTRxlLjMPMqVty3uGTgDwEH2/avuy366w1zKgVoVwkceVR0x+BWi+MrOlP5E0qSRM/3BspvA6EO2JesJJ8B38HKDGil3mD6YpsHWlFWLoING5N3Mz+80IuBUAtrTpN1ZmlH63kNlukKNqAsS2MEv2Bi6mmHSP/11m6eo4htW6v2aAK8ma3aW0TN85rOH1mw7ZWljw2prYZyBnyiJUpu6PHPVbmKiE0dMJK5IhhOPsr8rHr1jr0D4SphpkcXFrTXNp0ZZOKhg9IGyqncZFDexJy3kMTqU9jtIlFnBXgujtQJsIcbJU3NJxfspNc3J0lOY/je13fSH2nJ2DrB4AQc=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: roronya/sqlforerogamer
+true:
+  tags: true
