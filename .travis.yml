@@ -1,0 +1,9 @@
+language: python
+python:
+    - "3.4"
+    - "3.5"
+    - "3.6"
+install: # travisci の VM の setuptools のバージョンが低いと怒られるので upgrade する
+    - pip install setuptools --upgrade
+script:
+    - python ./setup.py test
