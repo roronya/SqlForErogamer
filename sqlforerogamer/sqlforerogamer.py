@@ -8,7 +8,7 @@ def read(sql):
     http_responce = requests.post(EROGAME_SCAPE_SQL_URL, {'sql': sql})
     html = http_responce.content
     try:
-         df = pd.read_html(html)[0].pipe( lambda df: df.rename(columns=df.iloc[0]) ).drop(0).reset_index()
+         df = pd.read_html(html)[0]
 
     except ValueError:
         message = BeautifulSoup(html, "lxml").find(id='query_result_main').get_text()
@@ -17,3 +17,4 @@ def read(sql):
 
 def tables():
     return read('select schemaname, relname from pg_stat_user_tables')
+
